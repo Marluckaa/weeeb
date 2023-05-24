@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1 data-txt="Hello...">Hello...</h1>
+        <h2>WELCOME TO MARLUCK'S WEBSITE</h2>
+        <img src="" alt="">
+    </div>
+    <div>
+        <div class="container">
+       <form action="config.php" method="post">
+            <div class="form signup">
+                <h3>Sign up</h3>
+                <div class="inputBox">
+                    <input type="text" required="required" name="uname">
+                    <i class="fa-regular fa-user"></i>
+                    <span>Username</span>
+                </div>
+                <div class="inputBox">
+                    <input type="email" required="required" name="email">
+                    <i class="fa-solid fa-lock"></i>
+                    <span>Email</span>
+                </div>
+                <div class="inputBox">
+                    <input type="password" required="required" name="pass">
+                    <i class="fa-solid fa-lock"></i>
+                    <span>Create password</span>
+                </div>
+                <div class="inputBox">
+                    <input type="submit" name="reg_submit"value="Create Account">
+                </div>
+                <p>Already a member? <a href="#"
+                class="login">Log in</a></p>
+                <!--<select>
+                    <option value="user">user</option>
+                    <option value="admin">admin</option>
+                </select>-->
+        </form>
+            </div>
+            <div class="form signin">
+                <form action="config.php" method="post">
+                <h3>Sign in</h3>
+                <div class="inputBox">
+                    <input type="text" name="txt_name" required="required">
+                    <i class="fa-regular fa-user"></i>
+                    <span>Username</span>
+                </div>
+                <div class="inputBox">
+                    <input type="password" name="txt_pass" required="required">
+                    <i class="fa-solid fa-lock"></i>
+                    <span>password</span>
+                </div>
+                <div class="inputBox">
+                    <input type="submit" name="but_submit" value="Login">
+                </div>
+                <p>Not Registered?<a href="#"
+                    class="create">Create an account</a></p>
+                    </form>
+                    
+            </div>
+      
+        </div>
+    </div>
+    
+   
+    <script>
+        let login = document.querySelector('.login');
+        let create = document.querySelector('.create');
+        let container = document.querySelector('.container');
+        let signup = document.querySelector('.signup');
+
+        login.onclick = function(){
+            container.classList.add('signinForm');
+            container.classList.remove('signup');
+        }
+        create.onclick = function(){
+            container.classList.remove('signinForm');
+        }
+    </script>
+</body>
+</html>
