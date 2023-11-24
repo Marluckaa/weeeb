@@ -1,14 +1,10 @@
-<?php require("register.class.php");?>
+<?php require("login.class.php"); ?>
 <?php
-if(isset($_POST["submit"])){
-    $user = new RegisterUser($_POST['username'],$_POST['password']);
+if (isset($_POST["submit"])) {
+    $user = new LoginUser($_POST['username'], $_POST['password']);
 }
 
- ?>
- 
-
-
-
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,8 +27,12 @@ if(isset($_POST["submit"])){
 
         <button type="submit" name="submit">Register</button>
 
-        <p class="error"><?php echo @$user->error ?></p>
-        <p class="success"><?php echo @$user->success ?></p>
+        <p class="error">
+            <?php echo @$user->error ?>
+        </p>
+        <p class="success">
+            <?php echo @$user->success ?>
+        </p>
 
 
     </form>
